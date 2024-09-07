@@ -1,0 +1,266 @@
+/* Define CSS Variables for Dark and Dynamic Styling */
+:root {
+    --primary-color: #b22222; /* Dark red for buttons and accents */
+    --secondary-color: #1c2833; /* Very dark blue-gray for navbar and text */
+    --background-color: #2f3640; /* Dark charcoal background for a sleek look */
+    --highlight-color: #e74c3c; /* Bright red-orange for highlights and links */
+    --text-color: #ecf0f1; /* Light gray for text readability on dark backgrounds */
+    --hover-color: #922b21; /* Deeper red for button hover states */
+    --font-family: 'Poppins', sans-serif; /* Font family */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-family: 'Sofia', sans-serif;
+    text-shadow: 10px #2c2c2c;
+}
+
+.logo:hover {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    font-family: "Trirong", serif;
+    font-size: large;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--highlight-color);
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+}
+
+.hero-images {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-image {
+    width: 34%;
+    max-width: 450px;
+    height: auto;
+    animation: fadeIn 2s;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-color);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    z-index: 5;
+}
+
+@keyframes slideInTopToBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottomToTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.cta-button {
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+.cta-button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-3px);
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 40px;
+    background: #2c2c2c; /* Dark gray background for a refined look */
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+.menu-section h2 {
+    color: white;
+    margin-bottom: 40px;
+    font-family: 'Sofia', sans-serif;
+    text-shadow: #2c2c2c;
+}
+
+.menu-item {
+    background: #434343; /* Slightly lighter gray for card contrast */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.menu-item h3 {
+    color: red;
+    padding: 5px;
+    font-family: "Trirong", serif;
+   
+}
+
+.menu-item span {
+    color: wheat;
+    font-weight: bold;
+    font-size: large;
+
+}
+
+/* About Section */
+.about-section {
+    padding: 40px;
+    text-align: center;
+    background: #2c2c2c; /* Darker tone for the about section */
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.about-section h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Sofia', sans-serif;
+    text-shadow: #2c2c2c;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 40px;
+    text-align: center;
+    background: #3a3a3a; /* Neutral dark background */
+    animation: slideInRight 1s ease-out;
+}
+
+.contact-section h2 {
+    color: white; /* Bright green for contrast */
+    margin-bottom: 20px;
+    font-family: 'Sofia', sans-serif;
+    text-shadow: #2c2c2c;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #2f2f2f;
+    color: var(--text-color);
+    transition: border-color 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: var(--highlight-color);
+    outline: none;
+}
+
+#contact-form button {
+    padding: 12px;
+    border: none;
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#contact-form button:hover {
+    background-color: #c0392b; /* Darker red shade for hover effect */
+    transform: translateY(-3px);
+}

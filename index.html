@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Landing Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Atharva's Kitchen</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+<header id="home" class="hero-section">
+    <div class="hero-images">
+        <img src="images/bg3.jpg" class="hero-image top-to-bottom" alt="Top to Bottom Image">
+        <img src="images/bg1.jpg" class="hero-image center" alt="Center Image">
+        <img src="images/bg2.jpg" class="hero-image bottom-to-top" alt="Bottom to Top Image">
+        
+    </div>
+    <!-- Text and Button Container -->
+    <div class="hero-content">
+        <h1>Welcome to Our Restaurant</h1>
+        <p>Experience the best cuisine in town</p>
+        <button class="cta-button">Book a Table</button>
+    </div>
+</header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section scroll effect">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Quiche Lorraine</h3>
+                <p>It's a savory French tart with a buttery crust, filled with creamy custard, crispy bacon, and cheese.</p>
+                <span>$10</span>
+            </div>
+            <div class="menu-item">
+                <h3>Spaghetti al olio</h3>
+                <p>it's a simple Italian pasta with garlic, olive oil, chili flakes, and parsley.</p>
+                <span>$12</span>
+            </div>
+            <div class="menu-item">
+                <h3>Tiramisu</h3>
+                <p>It's a classic Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cheese, cocoa, and a hint of liqueur.</p>
+                <span>$15</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>Learn more about our story, our team, and our commitment to great food and service.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section scroll effect">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
